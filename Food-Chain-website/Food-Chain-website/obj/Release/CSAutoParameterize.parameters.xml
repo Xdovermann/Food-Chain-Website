@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="Food-chain-connectionString-Web.config Connection String" description="Food-chain-connectionString Connection String used in web.config by the application to access the database." defaultValue="[PlaceHolder for connection: ]" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\xdove\\Documents\\GitHub\\Food-Chain-Website\\Food-Chain-website\\Food-Chain-website\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Food-chain-connectionString']/@connectionString" />
+  </parameter>
+</parameters>

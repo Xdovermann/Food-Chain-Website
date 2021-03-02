@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-03-02T11:53:06.7833801Z"
+    },
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2021-03-02T11:53:19.6650107Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "20f9aa32-b461-4681-9915-c46c79a2c83a"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "Food-Chain-website20210302121342ResourceGroup"
+    }
+  }
+}
