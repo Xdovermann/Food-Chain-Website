@@ -4,21 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account
+namespace Food_Chain_website.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ConfirmEmailChangeModel : PageModel
     {
-        private readonly UserManager<Food_chain_User> _userManager;
-        private readonly SignInManager<Food_chain_User> _signInManager;
+        private readonly UserManager<Food_Chain_User> _userManager;
+        private readonly SignInManager<Food_Chain_User> _signInManager;
 
-        public ConfirmEmailChangeModel(UserManager<Food_chain_User> userManager, SignInManager<Food_chain_User> signInManager)
+        public ConfirmEmailChangeModel(UserManager<Food_Chain_User> userManager, SignInManager<Food_Chain_User> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

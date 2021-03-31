@@ -22,7 +22,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Food-chain-website/1.0.0": {
+      "Food-Chain-website/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.13",
           "Microsoft.AspNetCore.Identity.UI": "3.1.13",
@@ -294,10 +294,10 @@
           "WindowsBase": "4.0.0.0"
         },
         "runtime": {
-          "Food-chain-website.dll": {}
+          "Food-Chain-website.dll": {}
         },
         "compile": {
-          "Food-chain-website.dll": {}
+          "Food-Chain-website.dll": {}
         }
       },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.13": {
@@ -3901,7 +3901,7 @@
     }
   },
   "libraries": {
-    "Food-chain-website/1.0.0": {
+    "Food-Chain-website/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

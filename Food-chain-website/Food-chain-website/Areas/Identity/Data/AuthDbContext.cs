@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace Food_chain_website.Data
+namespace Food_Chain_website.Data
 {
-    public class AuthDbContext : IdentityDbContext<Food_chain_User>
+    public class AuthDBContext : IdentityDbContext<Food_Chain_User>
     {
-        public AuthDbContext(DbContextOptions<AuthDbContext> options)
+        public AuthDBContext(DbContextOptions<AuthDBContext> options)
             : base(options)
         {
         }

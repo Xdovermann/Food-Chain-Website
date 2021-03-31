@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
+namespace Food_Chain_website.Areas.Identity.Pages.Account.Manage
 {
     public static class ManageNavPages
     {

@@ -4,21 +4,21 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account
+namespace Food_Chain_website.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class LoginWith2faModel : PageModel
     {
-        private readonly SignInManager<Food_chain_User> _signInManager;
+        private readonly SignInManager<Food_Chain_User> _signInManager;
         private readonly ILogger<LoginWith2faModel> _logger;
 
-        public LoginWith2faModel(SignInManager<Food_chain_User> signInManager, ILogger<LoginWith2faModel> logger)
+        public LoginWith2faModel(SignInManager<Food_Chain_User> signInManager, ILogger<LoginWith2faModel> logger)
         {
             _signInManager = signInManager;
             _logger = logger;

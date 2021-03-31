@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
+namespace Food_Chain_website.Areas.Identity.Pages.Account.Manage
 {
     public class TwoFactorAuthenticationModel : PageModel
     {
         private const string AuthenicatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}";
 
-        private readonly UserManager<Food_chain_User> _userManager;
-        private readonly SignInManager<Food_chain_User> _signInManager;
+        private readonly UserManager<Food_Chain_User> _userManager;
+        private readonly SignInManager<Food_Chain_User> _signInManager;
         private readonly ILogger<TwoFactorAuthenticationModel> _logger;
 
         public TwoFactorAuthenticationModel(
-            UserManager<Food_chain_User> userManager,
-            SignInManager<Food_chain_User> signInManager,
+            UserManager<Food_Chain_User> userManager,
+            SignInManager<Food_Chain_User> signInManager,
             ILogger<TwoFactorAuthenticationModel> logger)
         {
             _userManager = userManager;

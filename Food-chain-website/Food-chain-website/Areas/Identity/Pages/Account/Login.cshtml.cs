@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -13,18 +13,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account
+namespace Food_Chain_website.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class LoginModel : PageModel
     {
-        private readonly UserManager<Food_chain_User> _userManager;
-        private readonly SignInManager<Food_chain_User> _signInManager;
+        private readonly UserManager<Food_Chain_User> _userManager;
+        private readonly SignInManager<Food_Chain_User> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<Food_chain_User> signInManager, 
+        public LoginModel(SignInManager<Food_Chain_User> signInManager, 
             ILogger<LoginModel> logger,
-            UserManager<Food_chain_User> userManager)
+            UserManager<Food_Chain_User> userManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

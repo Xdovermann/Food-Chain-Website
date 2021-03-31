@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Food_chain_website
+namespace Food_Chain_website
 {
     public class Program
     {

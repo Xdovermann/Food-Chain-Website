@@ -1,8 +1,8 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@using Food_chain_website.Areas.Identity.Data
+@using Food_Chain_website.Areas.Identity.Data
 
-@inject SignInManager<Food_chain_User> SignInManager
-@inject UserManager<Food_chain_User> UserManager
+@inject SignInManager<Food_Chain_User> SignInManager
+@inject UserManager<Food_Chain_User> UserManager
 
 <ul class="navbar-nav">
 @if (SignInManager.IsSignedIn(User))

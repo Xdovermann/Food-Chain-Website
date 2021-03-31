@@ -1,4 +1,4 @@
-﻿using Food_chain_website.Models;
+﻿using Food_Chain_website.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Food_chain_website.Controllers
+namespace Food_Chain_website.Controllers
 {
     public class HomeController : Controller
     {

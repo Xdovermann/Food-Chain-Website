@@ -8816,11 +8816,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xdove\\Desktop\\Food-Chain-website\\Food-chain-website\\Food-chain-website\\Food-chain-website.csproj",
-      "projectName": "Food-chain-website",
-      "projectPath": "C:\\Users\\xdove\\Desktop\\Food-Chain-website\\Food-chain-website\\Food-chain-website\\Food-chain-website.csproj",
+      "projectUniqueName": "C:\\Users\\xdove\\Documents\\GitHub\\Food-Chain-Website\\Food-chain-website\\Food-Chain-website\\Food-Chain-website.csproj",
+      "projectName": "Food-Chain-website",
+      "projectPath": "C:\\Users\\xdove\\Documents\\GitHub\\Food-Chain-Website\\Food-chain-website\\Food-Chain-website\\Food-Chain-website.csproj",
       "packagesPath": "C:\\Users\\xdove\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xdove\\Desktop\\Food-Chain-website\\Food-chain-website\\Food-chain-website\\obj\\",
+      "outputPath": "C:\\Users\\xdove\\Documents\\GitHub\\Food-Chain-Website\\Food-chain-website\\Food-Chain-website\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xdove\\AppData\\Roaming\\NuGet\\NuGet.Config",

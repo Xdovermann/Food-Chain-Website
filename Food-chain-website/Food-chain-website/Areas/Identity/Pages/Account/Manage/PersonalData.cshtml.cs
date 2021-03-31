@@ -1,19 +1,19 @@
 ﻿using System.Threading.Tasks;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
+namespace Food_Chain_website.Areas.Identity.Pages.Account.Manage
 {
     public class PersonalDataModel : PageModel
     {
-        private readonly UserManager<Food_chain_User> _userManager;
+        private readonly UserManager<Food_Chain_User> _userManager;
         private readonly ILogger<PersonalDataModel> _logger;
 
         public PersonalDataModel(
-            UserManager<Food_chain_User> userManager,
+            UserManager<Food_Chain_User> userManager,
             ILogger<PersonalDataModel> logger)
         {
             _userManager = userManager;

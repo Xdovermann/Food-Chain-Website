@@ -7,7 +7,7 @@ using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -15,19 +15,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account
+namespace Food_Chain_website.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<Food_chain_User> _signInManager;
-        private readonly UserManager<Food_chain_User> _userManager;
+        private readonly SignInManager<Food_Chain_User> _signInManager;
+        private readonly UserManager<Food_Chain_User> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
 
         public RegisterModel(
-            UserManager<Food_chain_User> userManager,
-            SignInManager<Food_chain_User> signInManager,
+            UserManager<Food_Chain_User> userManager,
+            SignInManager<Food_Chain_User> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender)
         {
@@ -46,6 +46,12 @@ namespace Food_chain_website.Areas.Identity.Pages.Account
 
         public class InputModel
         {
+            [Required]
+            [DataType(DataType.Text)]
+            [Display(Name = "User name")]
+            public string Username { get; set; }
+
+
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
@@ -75,7 +81,7 @@ namespace Food_chain_website.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new Food_chain_User { UserName = Input.Email, Email = Input.Email };
+                var user = new Food_Chain_User { UserName = Input.Username, Email = Input.Email };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

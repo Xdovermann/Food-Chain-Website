@@ -6,24 +6,24 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Linq;
 using System.Threading.Tasks;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
+namespace Food_Chain_website.Areas.Identity.Pages.Account.Manage
 {
     public class EnableAuthenticatorModel : PageModel
     {
-        private readonly UserManager<Food_chain_User> _userManager;
+        private readonly UserManager<Food_Chain_User> _userManager;
         private readonly ILogger<EnableAuthenticatorModel> _logger;
         private readonly UrlEncoder _urlEncoder;
 
         private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
 
         public EnableAuthenticatorModel(
-            UserManager<Food_chain_User> userManager,
+            UserManager<Food_Chain_User> userManager,
             ILogger<EnableAuthenticatorModel> logger,
             UrlEncoder urlEncoder)
         {
@@ -112,7 +112,7 @@ namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
             }
         }
 
-        private async Task LoadSharedKeyAndQrCodeUriAsync(Food_chain_User user)
+        private async Task LoadSharedKeyAndQrCodeUriAsync(Food_Chain_User user)
         {
             // Load the authenticator key & QR code URI to display on the form
             var unformattedKey = await _userManager.GetAuthenticatorKeyAsync(user);
@@ -149,7 +149,7 @@ namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("Food_chain_website"),
+                _urlEncoder.Encode("Food_Chain_website"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

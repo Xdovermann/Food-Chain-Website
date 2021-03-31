@@ -1,22 +1,22 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using System.Text;
 using System.Threading.Tasks;
-using Food_chain_website.Areas.Identity.Data;
+using Food_Chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace Food_chain_website.Areas.Identity.Pages.Account
+namespace Food_Chain_website.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class RegisterConfirmationModel : PageModel
     {
-        private readonly UserManager<Food_chain_User> _userManager;
+        private readonly UserManager<Food_Chain_User> _userManager;
         private readonly IEmailSender _sender;
 
-        public RegisterConfirmationModel(UserManager<Food_chain_User> userManager, IEmailSender sender)
+        public RegisterConfirmationModel(UserManager<Food_Chain_User> userManager, IEmailSender sender)
         {
             _userManager = userManager;
             _sender = sender;
