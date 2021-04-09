@@ -7,7 +7,7 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Food_Chain_website.Areas.Identity.Data;
+using Food_chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -15,19 +15,19 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
-namespace Food_Chain_website.Areas.Identity.Pages.Account
+namespace Food_chain_website.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class ExternalLoginModel : PageModel
     {
-        private readonly SignInManager<Food_Chain_User> _signInManager;
-        private readonly UserManager<Food_Chain_User> _userManager;
+        private readonly SignInManager<Food_chain_User> _signInManager;
+        private readonly UserManager<Food_chain_User> _userManager;
         private readonly IEmailSender _emailSender;
         private readonly ILogger<ExternalLoginModel> _logger;
 
         public ExternalLoginModel(
-            SignInManager<Food_Chain_User> signInManager,
-            UserManager<Food_Chain_User> userManager,
+            SignInManager<Food_chain_User> signInManager,
+            UserManager<Food_chain_User> userManager,
             ILogger<ExternalLoginModel> logger,
             IEmailSender emailSender)
         {
@@ -122,7 +122,7 @@ namespace Food_Chain_website.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                var user = new Food_Chain_User { UserName = Input.Email, Email = Input.Email };
+                var user = new Food_chain_User { UserName = Input.Email, Email = Input.Email };
 
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)

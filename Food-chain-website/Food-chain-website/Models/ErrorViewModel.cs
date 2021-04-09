@@ -1,6 +1,6 @@
 using System;
 
-namespace Food_Chain_website.Models
+namespace Food_chain_website.Models
 {
     public class ErrorViewModel
     {

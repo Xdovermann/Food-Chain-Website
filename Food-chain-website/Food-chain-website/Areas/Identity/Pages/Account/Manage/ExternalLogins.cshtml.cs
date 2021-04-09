@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Food_Chain_website.Areas.Identity.Data;
+using Food_chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Food_Chain_website.Areas.Identity.Pages.Account.Manage
+namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
 {
     public class ExternalLoginsModel : PageModel
     {
-        private readonly UserManager<Food_Chain_User> _userManager;
-        private readonly SignInManager<Food_Chain_User> _signInManager;
+        private readonly UserManager<Food_chain_User> _userManager;
+        private readonly SignInManager<Food_chain_User> _signInManager;
 
         public ExternalLoginsModel(
-            UserManager<Food_Chain_User> userManager,
-            SignInManager<Food_Chain_User> signInManager)
+            UserManager<Food_chain_User> userManager,
+            SignInManager<Food_chain_User> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;

@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using Food_Chain_website.Areas.Identity.Data;
+using Food_chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-namespace Food_Chain_website.Areas.Identity.Pages.Account.Manage
+namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
 {
     public class ChangePasswordModel : PageModel
     {
-        private readonly UserManager<Food_Chain_User> _userManager;
-        private readonly SignInManager<Food_Chain_User> _signInManager;
+        private readonly UserManager<Food_chain_User> _userManager;
+        private readonly SignInManager<Food_chain_User> _signInManager;
         private readonly ILogger<ChangePasswordModel> _logger;
 
         public ChangePasswordModel(
-            UserManager<Food_Chain_User> userManager,
-            SignInManager<Food_Chain_User> signInManager,
+            UserManager<Food_chain_User> userManager,
+            SignInManager<Food_chain_User> signInManager,
             ILogger<ChangePasswordModel> logger)
         {
             _userManager = userManager;

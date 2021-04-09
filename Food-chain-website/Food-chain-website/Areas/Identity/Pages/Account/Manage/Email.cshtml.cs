@@ -5,24 +5,24 @@ using System.Text;
 using System.Text.Encodings.Web;
 using System.Linq;
 using System.Threading.Tasks;
-using Food_Chain_website.Areas.Identity.Data;
+using Food_chain_website.Areas.Identity.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 
-namespace Food_Chain_website.Areas.Identity.Pages.Account.Manage
+namespace Food_chain_website.Areas.Identity.Pages.Account.Manage
 {
     public partial class EmailModel : PageModel
     {
-        private readonly UserManager<Food_Chain_User> _userManager;
-        private readonly SignInManager<Food_Chain_User> _signInManager;
+        private readonly UserManager<Food_chain_User> _userManager;
+        private readonly SignInManager<Food_chain_User> _signInManager;
         private readonly IEmailSender _emailSender;
 
         public EmailModel(
-            UserManager<Food_Chain_User> userManager,
-            SignInManager<Food_Chain_User> signInManager,
+            UserManager<Food_chain_User> userManager,
+            SignInManager<Food_chain_User> signInManager,
             IEmailSender emailSender)
         {
             _userManager = userManager;
@@ -50,7 +50,7 @@ namespace Food_Chain_website.Areas.Identity.Pages.Account.Manage
             public string NewEmail { get; set; }
         }
 
-        private async Task LoadAsync(Food_Chain_User user)
+        private async Task LoadAsync(Food_chain_User user)
         {
             var email = await _userManager.GetEmailAsync(user);
             Email = email;
