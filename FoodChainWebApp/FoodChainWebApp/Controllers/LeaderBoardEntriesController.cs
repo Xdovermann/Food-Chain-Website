@@ -31,10 +31,16 @@ namespace FoodChainWebApp.Controllers
             return View();
         }
 
-        // POST: shows filtered leaderbord on username
+        // POST: shows filtered leaderbord on username  
         public async Task<IActionResult> ShowSearchResults(String SearchPhrase)
         {
             return View("Index",await _context.LeaderBoardEntry.Where( j => j.Username.Contains(SearchPhrase)).ToListAsync());
+        }
+
+        // loads the page with the unity login
+        public async Task<IActionResult> LoginUnity()
+        {
+            return View("UnityLogin");
         }
 
         // GET: LeaderBoardEntries/Details/5
