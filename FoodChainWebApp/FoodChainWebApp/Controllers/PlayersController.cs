@@ -6,30 +6,30 @@ using System.Linq;
 
 namespace FoodChainWebApp.Controllers
 {
-    // link is : https://localhost:44386/api/players
+   
     [Route("api/[controller]")]
     [ApiController]
     public class PlayersController : ControllerBase
     {
         // test waardes dit doe je normaal via de database
         // hier leg je je database connectie
-        private static List<Player> Players = new List<Player>()
+        private static List<PlayerProfile> Players = new List<PlayerProfile>()
         {
-            new Player
+            new PlayerProfile
             {
                 Id = 1,
                 Username = "TestPlayer_1",
                 Score = 1000,
 
             },
-              new Player
+              new PlayerProfile
             {
                 Id = 2,
                 Username = "TestPlayer_2",
                 Score = 500,
 
             },
-                new Player
+                new PlayerProfile
             {
                 Id = 3,
                 Username = "TestPlayer_3",
@@ -52,14 +52,14 @@ namespace FoodChainWebApp.Controllers
         [HttpGet("{id}")]
         public JsonResult Get(int id)
         {
-            Player player = Players.Single(p => p.Id == id);
+            PlayerProfile player = Players.Single(p => p.Id == id);
             return new JsonResult(player);
         }
 
         // create functie voor een nieuwe speler
         //POST api/players
         [HttpPost]
-        public JsonResult Post([FromBody] Player newPlayer)
+        public JsonResult Post([FromBody] PlayerProfile newPlayer)
         {
             Players.Add(newPlayer); // hier zal je add database callen
             return new JsonResult(Players);
@@ -70,7 +70,7 @@ namespace FoodChainWebApp.Controllers
         [HttpPut("{id}")]
         public JsonResult Put(int id, [FromBody] float newscore)
         {
-            Player player = Players.Single(p => p.Id == id);
+            PlayerProfile player = Players.Single(p => p.Id == id);
             player.Score = newscore;
             return new JsonResult(player);
         }
@@ -80,7 +80,7 @@ namespace FoodChainWebApp.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            Player player = Players.Single(p => p.Id == id);
+            PlayerProfile player = Players.Single(p => p.Id == id);
             Players.Remove(player);
         }
     }

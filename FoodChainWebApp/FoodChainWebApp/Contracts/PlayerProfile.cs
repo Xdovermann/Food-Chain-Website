@@ -8,7 +8,7 @@ namespace FoodChainWebApp.Contracts
 {
    
         [JsonObject, Serializable]
-        public class Player
+        public class PlayerProfile
         {
             public int Id { get; set; }
 
